@@ -1,0 +1,298 @@
+
+(rules PCB atempt15
+  (snap_angle 
+    fortyfive_degree
+  )
+  (autoroute_settings
+    (fanout off)
+    (app.freerouting.autoroute on)
+    (postroute on)
+    (vias on)
+    (via_costs 50)
+    (plane_via_costs 5)
+    (start_ripup_costs 100)
+    (start_pass_no 18)
+    (layer_rule F.Cu
+      (active on)
+      (preferred_direction horizontal)
+      (preferred_direction_trace_costs 1.0)
+      (against_preferred_direction_trace_costs 3.4)
+    )
+    (layer_rule In1.Cu
+      (active off)
+      (preferred_direction horizontal)
+      (preferred_direction_trace_costs 1.0)
+      (against_preferred_direction_trace_costs 3.4)
+    )
+    (layer_rule In2.Cu
+      (active off)
+      (preferred_direction horizontal)
+      (preferred_direction_trace_costs 1.0)
+      (against_preferred_direction_trace_costs 3.4)
+    )
+    (layer_rule B.Cu
+      (active on)
+      (preferred_direction vertical)
+      (preferred_direction_trace_costs 1.0)
+      (against_preferred_direction_trace_costs 1.4)
+    )
+  )
+  (rule
+    (width 250.0)
+    (clear 200.2)
+    (clear 125.0 (type smd_to_turn_gap))
+    (clear 50.0 (type smd_smd))
+  )
+  (padstack "Via[0-3]_800:400_um"
+    (shape
+      (circle F.Cu 800.0 0.0 0.0)
+    )
+    (shape
+      (circle In1.Cu 800.0 0.0 0.0)
+    )
+    (shape
+      (circle In2.Cu 800.0 0.0 0.0)
+    )
+    (shape
+      (circle B.Cu 800.0 0.0 0.0)
+    )
+    (attach off)
+  )
+  (padstack "Via[0-3]_1700:1000_um"
+    (shape
+      (circle F.Cu 1700.0 0.0 0.0)
+    )
+    (shape
+      (circle In1.Cu 1700.0 0.0 0.0)
+    )
+    (shape
+      (circle In2.Cu 1700.0 0.0 0.0)
+    )
+    (shape
+      (circle B.Cu 1700.0 0.0 0.0)
+    )
+    (attach off)
+  )
+  (padstack "Via[0-3]_400:200_um"
+    (shape
+      (circle F.Cu 400.0 0.0 0.0)
+    )
+    (shape
+      (circle In1.Cu 400.0 0.0 0.0)
+    )
+    (shape
+      (circle In2.Cu 400.0 0.0 0.0)
+    )
+    (shape
+      (circle B.Cu 400.0 0.0 0.0)
+    )
+    (attach off)
+  )
+  (padstack "Via[0-3]_1000:500_um"
+    (shape
+      (circle F.Cu 1000.0 0.0 0.0)
+    )
+    (shape
+      (circle In1.Cu 1000.0 0.0 0.0)
+    )
+    (shape
+      (circle In2.Cu 1000.0 0.0 0.0)
+    )
+    (shape
+      (circle B.Cu 1000.0 0.0 0.0)
+    )
+    (attach off)
+  )
+  (padstack "Via[0-3]_1200:600_um"
+    (shape
+      (circle F.Cu 1200.0 0.0 0.0)
+    )
+    (shape
+      (circle In1.Cu 1200.0 0.0 0.0)
+    )
+    (shape
+      (circle In2.Cu 1200.0 0.0 0.0)
+    )
+    (shape
+      (circle B.Cu 1200.0 0.0 0.0)
+    )
+    (attach off)
+  )
+  (via 
+    "Via[0-3]_800:400_um" "Via[0-3]_800:400_um" default
+  )
+  (via 
+    "Via[0-3]_1700:1000_um" "Via[0-3]_1700:1000_um" default
+  )
+  (via 
+    "Via[0-3]_400:200_um" "Via[0-3]_400:200_um" default
+  )
+  (via 
+    "Via[0-3]_1000:500_um" "Via[0-3]_1000:500_um" default
+  )
+  (via 
+    "Via[0-3]_1200:600_um" "Via[0-3]_1200:600_um" default
+  )
+  (via 
+    "Via[0-3]_800:400_um-kicad_default" "Via[0-3]_800:400_um" "kicad_default"
+  )
+  (via 
+    "Via[0-3]_1700:1000_um-kicad_default" "Via[0-3]_1700:1000_um" "kicad_default"
+  )
+  (via 
+    "Via[0-3]_400:200_um-kicad_default" "Via[0-3]_400:200_um" "kicad_default"
+  )
+  (via 
+    "Via[0-3]_1000:500_um-kicad_default" "Via[0-3]_1000:500_um" "kicad_default"
+  )
+  (via 
+    "Via[0-3]_1200:600_um-kicad_default" "Via[0-3]_1200:600_um" "kicad_default"
+  )
+  (via 
+    "Via[0-3]_800:400_um-GND" "Via[0-3]_800:400_um" GND
+  )
+  (via 
+    "Via[0-3]_1700:1000_um-GND" "Via[0-3]_1700:1000_um" GND
+  )
+  (via 
+    "Via[0-3]_400:200_um-GND" "Via[0-3]_400:200_um" GND
+  )
+  (via 
+    "Via[0-3]_1000:500_um-GND" "Via[0-3]_1000:500_um" GND
+  )
+  (via 
+    "Via[0-3]_1200:600_um-GND" "Via[0-3]_1200:600_um" GND
+  )
+  (via 
+    "Via[0-3]_800:400_um-power" "Via[0-3]_800:400_um" power
+  )
+  (via 
+    "Via[0-3]_1700:1000_um-power" "Via[0-3]_1700:1000_um" power
+  )
+  (via 
+    "Via[0-3]_400:200_um-power" "Via[0-3]_400:200_um" power
+  )
+  (via 
+    "Via[0-3]_1000:500_um-power" "Via[0-3]_1000:500_um" power
+  )
+  (via 
+    "Via[0-3]_1200:600_um-power" "Via[0-3]_1200:600_um" power
+  )
+  (via_rule
+    default "Via[0-3]_400:200_um"
+  )
+  (via_rule
+    "kicad_default" "Via[0-3]_800:400_um-kicad_default"
+  )
+  (via_rule
+    GND "Via[0-3]_800:400_um-GND"
+  )
+  (via_rule
+    power "Via[0-3]_1700:1000_um-power"
+  )
+  (class default
+    "Net-(C1-Pad1)" "Net-(C10-Pad1)" "Net-(C13-Pad2)" "Net-(C21-Pad1)" "Net-(C33-Pad1)" "Net-(C34-Pad1)" "Net-(C35-Pad1)" "NRST_BLASTER"
+    "Net-(C47-Pad1)" "Net-(C48-Pad1)" "Net-(C49-Pad1)" "Net-(C53-Pad1)" "Net-(C54-Pad2)" "Net-(C79-Pad1)" "Net-(C80-Pad1)" "Net-(C81-Pad1)"
+    NRST "Net-(C90-Pad2)" "Net-(C91-Pad1)" "Net-(C93-Pad1)" "VREF_STM" VDDA "Net-(C108-Pad1)" "Net-(C109-Pad1)"
+    "Net-(C110-Pad1)" "Net-(C111-Pad1)" "Net-(C112-Pad1)" "Net-(C113-Pad1)" "Net-(C113-Pad2)" "Net-(C117-Pad2)" "Net-(C118-Pad1)" "Net-(C123-Pad1)"
+    "Net-(C124-Pad1)" "Net-(C126-Pad1)" "Net-(C130-Pad2)" "Net-(C131-Pad2)" "Net-(C132-Pad1)" "Net-(C134-Pad1)" "Net-(D1-Pad2)" "Net-(D2-Pad2)"
+    "Net-(D3-Pad2)" "Net-(D4-Pad1)" "Net-(D4-Pad2)" "LED_STLINK" "Net-(D5-Pad2)" "Net-(D6-Pad2)" "Net-(D7-Pad2)" "Net-(D8-Pad2)"
+    "Net-(D9-Pad2)" "Net-(D10-Pad2)" "/USB_MAIN_P" "unconnected-(J1-PadB5)" "unconnected-(J1-PadA8)" "/USB_MAIN_N" "unconnected-(J1-PadA5)" "unconnected-(J1-PadB8)"
+    "USB4_VBUS" "USB4_DN" "USB4_DP" DCLK "CFG_DONE" "Net-(J2-Pad1)" nCONF nCE
+    DATA NCSO ASDO "Net-(J2-Pad2)" 1 2 3 7
+    nSTAT 10 11 TDI TCK TMS TDO "FPGA_CLK"
+    24 25 DQ0 DQ1 DQ2 DQ3 DQ4 DQ5
+    DQ6 DQ7 LDQM CLK DQ15 DQ14 DQ13 DQ12
+    DQ11 DQ10 DQ9 DQ8 UDQM CKE A11 A9
+    A8 A7 A6 A5 A4 WE# CAS# RAS#
+    CS# BS0 BS1 A10 A0 A1 A2 A3
+    84 85 86 87 88 89 90 91
+    98 99 100 101 103 104 105 106
+    110 111 112 113 114 115 119 120
+    121 124 125 126 127 128 129 132
+    133 135 136 137 138 141 142 143
+    144 "Net-(J2-Pad3)" "unconnected-(J4-Pad4)" "unconnected-(J5-Pad7)" "unconnected-(J6-Pad54)" RX TX SWCLK
+    "STM_SWCLK" SWDIO "STM_SWDIO" PE2 PE3 PE4 PE5 PE6
+    PC13 PC14 PC15 "OSC_IN_STM32" "OSC_OUT_STM32" "RESET_STM32" PC0 "ETH_MDC"
+    PC2 PC3 PA0 "ETH_REF_CLK" "ETH_MDIO" PA3 PA4 PA5
+    PA6 "ETH_CRS_DV" "ETH_RX_ERR" PB1 BOOT1 PE7 PE8 PE9
+    PE10 PE11 PE12 PE13 PE14 PE15 PB10 "ETH_TX_EN"
+    PB14 PE0 PE1 PB8 PB9 PB7 PB5 PB6
+    SWO PD6 PD7 PD4 PD5 PD2 PD3 PD0
+    PD1 PC11 PC12 PA15 PC10 "Net-(J7-Pad2)" "Net-(J7-Pad3)" PA9
+    PA10 PC9 PA8 PC7 PC8 PD15 PC6 PD13
+    PD14 PD11 PD12 PD9 PD10 PD8 PB15 #EN
+    VP VN IO34 IO35 IO32 IO33 IO25 IO26
+    IO27 IO14 IO12 SHD SWP CMD SCK SDO
+    SDI IO23 "TX_ESP" IO22 IO21 "RX_ESP" IO18 IO19
+    IO17 IO5 IO4 IO16 IO2 IO0 IO15 IO13
+    TXP RXN RXP TXN "ETH_LED2" "ETH_LED1" "Net-(J13-PadL1)" "Net-(J13-PadL4)"
+    "unconnected-(J13-PadR7)" "unconnected-(J14-PadA5)" "USB_OTG_VBUS" "Net-(Q1-Pad1)" "Net-(Q1-Pad2)" "Net-(Q2-Pad1)" "Net-(Q3-Pad1)" "Net-(Q4-Pad1)"
+    "Net-(Q4-Pad2)" "unconnected-(J14-PadA8)" "CP2102_RST" "unconnected-(J14-PadB5)" DTR "unconnected-(J14-PadB8)" "Net-(R56-Pad2)" "Net-(R2-Pad1)"
+    "Net-(R4-Pad1)" "Net-(R5-Pad1)" "Net-(R6-Pad1)" "Net-(R7-Pad1)" "Net-(R10-Pad1)" "PA0_BLASTER" "OSC_IN_BLASTER" "OSC_OUT_BLASTER"
+    "BOOT0_BLASTER" "BOOT1_BLASTER" "OSC_IN_STLINK" "Net-(R28-Pad2)" "Net-(R29-Pad2)" "Net-(R30-Pad1)" "Net-(R31-Pad2)" BOOT0
+    "BOOT1_STLINK" "OSC_OUT_STLINK" "USB1_DP" "USB_RENUMN" "Net-(R49-Pad1)" "RTCLK_OSC_IN" "Net-(R57-Pad2)" "Net-(R60-Pad2)"
+    "RTCLK_OSC_OUT" "Net-(R63-Pad1)" "Net-(R69-Pad1)" "Net-(R71-Pad1)" "Net-(R72-Pad2)" "Net-(R76-Pad2)" "Net-(R77-Pad2)" "Net-(R78-Pad2)"
+    "Net-(R79-Pad2)" "Net-(R80-Pad2)" "Net-(R81-Pad2)" "Net-(R82-Pad2)" "Net-(R83-Pad2)" "Net-(R84-Pad2)" "Net-(R73-Pad2)" "Net-(R74-Pad2)"
+    "Net-(R75-Pad2)" "Net-(R85-Pad1)" "BOOT0_STLINK" "unconnected-(U6-Pad1)" "unconnected-(U6-Pad3)" "unconnected-(U6-Pad4)" "unconnected-(U6-Pad9)" "unconnected-(U6-Pad11)"
+    "unconnected-(U6-Pad12)" "unconnected-(U6-Pad14)" "unconnected-(U6-Pad15)" "unconnected-(U6-Pad23)" "unconnected-(U6-Pad24)" "unconnected-(U6-Pad26)" "unconnected-(U6-Pad27)" "unconnected-(U6-Pad28)"
+    "unconnected-(U6-Pad35)" "unconnected-(U6-Pad36)" "unconnected-(U6-Pad38)" "unconnected-(U6-Pad39)" "unconnected-(U6-Pad40)" "USB2_DP" "unconnected-(U6-Pad43)" "unconnected-(U6-Pad44)"
+    "unconnected-(U6-Pad46)" "unconnected-(U6-Pad47)" "USB3_DP" "unconnected-(U6-Pad51)" "unconnected-(U6-Pad52)" "unconnected-(U6-Pad54)" "unconnected-(U6-Pad55)" "unconnected-(U6-Pad58)"
+    "unconnected-(U6-Pad59)" "unconnected-(U6-Pad61)" "unconnected-(U6-Pad62)" "unconnected-(U6-Pad64)" "unconnected-(U8-Pad4)" "unconnected-(U8-Pad5)" "unconnected-(U8-Pad6)" "unconnected-(U8-Pad10)"
+    "unconnected-(U8-Pad11)" "unconnected-(U10-Pad2)" "unconnected-(U10-Pad3)" "unconnected-(U10-Pad4)" "unconnected-(U10-Pad11)" "unconnected-(U10-Pad12)" "unconnected-(U10-Pad13)" "unconnected-(U10-Pad14)"
+    "SWCLK_BLASTER" "unconnected-(U10-Pad16)" "unconnected-(U10-Pad17)" "unconnected-(U10-Pad18)" "unconnected-(U10-Pad19)" "unconnected-(U10-Pad21)" "unconnected-(U10-Pad22)" "SWDIO_BLASTER"
+    "unconnected-(U10-Pad27)" "unconnected-(U10-Pad28)" "unconnected-(U10-Pad29)" "unconnected-(U10-Pad30)" "SWO_BLASTER" "SWDIO_IN" "SWCLK_IN" "unconnected-(U10-Pad38)"
+    "unconnected-(U10-Pad39)" "unconnected-(U10-Pad40)" "unconnected-(U10-Pad41)" "unconnected-(U10-Pad42)" "unconnected-(U10-Pad43)" "unconnected-(U10-Pad45)" "unconnected-(U10-Pad46)" "unconnected-(U14-Pad36)"
+    "unconnected-(U14-Pad40)" "unconnected-(U16-Pad36)" "unconnected-(U16-Pad108)" "unconnected-(U18-Pad4)" "unconnected-(U18-Pad11)" "unconnected-(U18-Pad14)" "unconnected-(U18-Pad16)" "unconnected-(U18-Pad17)"
+    "unconnected-(U18-Pad19)" "unconnected-(U18-Pad22)" "unconnected-(U18-Pad28)" "unconnected-(U18-Pad29)" "unconnected-(U18-Pad39)" "unconnected-(U18-Pad40)" "unconnected-(U18-Pad41)" "unconnected-(U18-Pad42)"
+    "unconnected-(U18-Pad43)" "unconnected-(U18-Pad45)" "unconnected-(U18-Pad46)" "VBAT_STM" "unconnected-(U22-Pad1)" "unconnected-(U22-Pad2)" "unconnected-(U22-Pad9)" "unconnected-(U22-Pad10)"
+    "unconnected-(U22-Pad11)" "unconnected-(U22-Pad12)" "unconnected-(U22-Pad13)" "unconnected-(U22-Pad14)" "unconnected-(U22-Pad15)" "unconnected-(U22-Pad16)" "unconnected-(U22-Pad17)" "unconnected-(U22-Pad18)"
+    "unconnected-(U22-Pad19)" "unconnected-(U22-Pad20)" "unconnected-(U22-Pad21)" "unconnected-(U22-Pad22)" "unconnected-(U22-Pad23)" "unconnected-(U22-Pad27)" "unconnected-(U23-Pad32)" "unconnected-(U24-Pad7)"
+    "Net-(C121-Pad1)" "Net-(C9-Pad1)" "Net-(U3-Pad4)" "Net-(U3-Pad6)" "ETH_RX-" "ETH_RX+" "ETH_TX-" "ETH_TX+"
+    "USB1_DN" "USB2_DN" "USB3_DN" "Net-(J7-Pad5)" "Net-(J7-Pad6)" "Net-(J7-Pad7)" "OTG_N" "OTG_P"
+    "Net-(J7-Pad4)" "SWCLK_IN_STLINK" "SWDIO_IN_STLINK" "/ETHERNET+OTG/USB_OTG_+" "/ETHERNET+OTG/USB_OTG_-" "/USB4D-" /USB4D+ "unconnected-(SW6-Pad1)"
+    "unconnected-(SW1-Pad4)" "unconnected-(SW2-Pad3)" "unconnected-(SW2-Pad4)" "unconnected-(SW3-Pad4)" "unconnected-(SW4-Pad2)" "unconnected-(SW6-Pad4)" "unconnected-(SW7-Pad4)" "unconnected-(SW1-Pad1)"
+    "unconnected-(SW7-Pad3)"
+    (clearance_class default)
+    (via_rule default)
+    (rule
+      (width 250.0)
+    )
+    (circuit 
+      (use_layer F.Cu B.Cu)
+    )
+  )
+  (class "kicad_default"
+    (clearance_class "kicad_default")
+    (via_rule kicad_default)
+    (rule
+      (width 250.0)
+    )
+    (circuit 
+      (use_layer F.Cu B.Cu)
+    )
+  )
+  (class GND
+    GND
+    (clearance_class GND)
+    (via_rule GND)
+    (rule
+      (width 250.0)
+    )
+    (circuit 
+      (use_layer F.Cu B.Cu)
+    )
+  )
+  (class power
+    +5V "Net-(C5-Pad1)" "Net-(C6-Pad1)" "Net-(C14-Pad1)" "Net-(C15-Pad1)" "3V3_pereph" "1V1_pereph" "3V3_BLASTER"
+    "3V3_FPGA" "1V1_FPGA" "2V5_FPGA" "3V3_STLINK" "3V3_STM32" "3V3_ESP" "5V_header" "3V3_header"
+    (clearance_class power)
+    (via_rule power)
+    (rule
+      (width 1300.0)
+    )
+    (circuit 
+      (use_layer F.Cu B.Cu)
+    )
+  )
+)
