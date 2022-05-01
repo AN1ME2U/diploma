@@ -468,7 +468,7 @@
       "netlist": "./",
       "specctra_dsn": "atempt16.dsn",
       "step": "",
-      "vrml": ""
+      "vrml": "project.wrl"
     },
     "page_layout_descr_file": ""
   },
